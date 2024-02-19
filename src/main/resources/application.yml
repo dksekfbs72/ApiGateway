@@ -1,0 +1,13 @@
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: user_route
+#          uri: http://localhost:8080
+#          predicates:
+#            - Path=/user/**
+#          filters:
+#            - RewritePath=/user/(?<segment>.*), /$\{segment}
+#            - ModifyRequestBody=application/json,application/json;charset=UTF-8
+server:
+  port: 8083
