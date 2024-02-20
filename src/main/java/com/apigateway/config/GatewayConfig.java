@@ -17,6 +17,8 @@ public class GatewayConfig {
                         .uri("http://localhost:8081"))
                 .route("news-feed-service", r -> r.path("/newsfeed/**")
                         .uri("http://localhost:8082"))
+                .route("stock-management-service", r -> r.path("/stock/**")
+                        .uri("http://localhost:8084"))
                 .build();
     }
 }
